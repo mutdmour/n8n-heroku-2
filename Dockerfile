@@ -19,7 +19,7 @@ RUN apk --update add --virtual build-dependencies python build-base && \
 	apk --update add git && \
 	apk del build-dependencies
 
-RUN N8N_CORE_BRANCH=n8n-2312-item-list-node && \
+RUN N8N_CORE_BRANCH=elastic-security-node && \
     git clone https://github.com/n8n-io/n8n && \
 	cd n8n && \
     echo $N8N_CORE_BRANCH && \
@@ -42,4 +42,3 @@ RUN chmod +x /start.sh
 
 # define execution entrypoint
 CMD ["/start.sh"]
-
